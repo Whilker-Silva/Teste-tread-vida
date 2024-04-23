@@ -1,0 +1,3 @@
+/home/whilker/Documentos/GitHub/Teste-tread-vida/build/CMakeFiles/rebuild_cache.dir
+/home/whilker/Documentos/GitHub/Teste-tread-vida/build/CMakeFiles/edit_cache.dir
+/home/whilker/Documentos/GitHub/Teste-tread-vida/build/CMakeFiles/vida.dir

@@ -48,6 +48,7 @@ wifiComunication::~wifiComunication(){
 }
 
 string wifiComunication::receive(){
+    cout << "lendoo" << endl;
     int valread = read(new_socket, buffer, 1024);
     return string(buffer);
 }

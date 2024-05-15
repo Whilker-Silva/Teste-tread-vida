@@ -31,7 +31,6 @@ void Controle::stopActivity()
     serialMotor = NULL;
 
     ThreadBase::stopActivity();
-    cout << "Finalizando a thread de controle" << endl;
 }
 
 int Controle::run()
@@ -41,7 +40,7 @@ int Controle::run()
     this->is_alive = 1;
 
     this->tim1.tv_sec = 0;
-    this->tim1.tv_nsec = 10L;
+    this->tim1.tv_nsec = 10000000L;
 
     while (this->is_alive)
     {

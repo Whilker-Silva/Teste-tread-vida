@@ -43,5 +43,5 @@ void ThreadBase::stopActivity()
             nanosleep(&this->tim3, &this->tim4);
         }
     }
-    cout << "STOPPED THREAD ";
+    cout << "STOPPED THREAD " << endl;
 }

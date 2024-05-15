@@ -12,7 +12,7 @@ void Controle::startActivity()
     cout << "Inicializando a thread de controle" << endl;
 
     this->udp = new UDP();
-    this->serialMotor = new Serial(motorInterrupt, BAUD_RATE); 
+    this->serialMotor = new Serial(motorInterrupt, BAUD_RATE, "ttyS1"); 
     ThreadBase::startActivity();
 }
 

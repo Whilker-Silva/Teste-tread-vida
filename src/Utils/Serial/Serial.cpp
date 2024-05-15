@@ -1,8 +1,9 @@
 #include "Serial.h"
 
-Serial::Serial(int interrupt, int baudRate)
-{    
-    this->serialport = serialOpen("/dev/ttyS1", baudRate); 
+Serial::Serial(int interrupt, int baudRate, string p)
+{   
+    string porta = "/dev/" + p;    
+    this->serialport = serialOpen(porta.c_str(), baudRate);         
     this->interrupt = interrupt;
     //wiringPiSetup();    
     //pinMode(interrupt, OUTPUT);
@@ -19,16 +20,15 @@ void Serial::write(string s){
 
 string Serial::read(char c)
 {
-    //digitalWrite(interrupt, HIGH);
-    
+    //digitalWrite(interrupt, HIGH);    
     char receivedChar[256];
     int indice = 0;
     
     bool fim = false;
     do
-    {           
+    {  
       if (serialDataAvail(serialport)) { // Verifica se há dados disponíveis para leitura
-           
+          
             char incomingByte = serialGetchar(serialport); // Lê um byte da porta serial
 
             if (incomingByte == '\n' || incomingByte == c) { // Se encontrou um caractere de término de linha

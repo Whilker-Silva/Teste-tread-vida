@@ -11,9 +11,9 @@ using namespace std;
 int main(int argc, char *argv[]) /// < Main function that create and calls for reading and writing in memory
 {
     Controle *controle = new Controle();
-    // Registro * registro = new Registro(NULL, serialMotor);
+    Registro * registro = new Registro();
 
-    11;
+
 
     int quit = -1;
     do

@@ -18,7 +18,7 @@ private:
     
 public: 
 
-    Serial(int interrupt, int baudRate);
+    Serial(int interrupt, int baudRate, string p);
     ~Serial();
     
     void write(string s);

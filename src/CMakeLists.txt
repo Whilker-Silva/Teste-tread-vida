@@ -7,7 +7,6 @@ add_executable(vida) #cria o executável vida
 find_package (Threads)
 find_library(WIRINGPI_LIB wiringPi)
 
-
 #Liga as bibliotecas Threads e "rt" ao executável "vida".
 target_link_libraries(vida ${CMAKE_THREAD_LIBS_INIT} rt) 
 target_link_libraries(vida ${WIRINGPI_LIB})
@@ -17,18 +16,8 @@ target_sources(
     vida
 
     PRIVATE
-
         
-        main.cpp
-
-        #Control
-        #Containers/Control/Control.cpp
-        #Containers/Control/Control.h
-
-        #Containers/Control/files/control_struct.h
-        #Containers/Control/files/general_defines.h
-        #Containers/Control/files/shmem_struct.h
-        #Containers/Control/files/test_struct.h
+        main.cpp        
 
         #Files
         Files/DefinePin.h

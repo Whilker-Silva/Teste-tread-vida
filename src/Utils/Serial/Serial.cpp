@@ -7,7 +7,6 @@ Serial::Serial(int interrupt, int baudRate)
     //wiringPiSetup();    
     //pinMode(interrupt, OUTPUT);
     //digitalWrite(interrupt, LOW);
-    
 }
 
 Serial::~Serial(){
@@ -20,7 +19,6 @@ void Serial::write(string s){
 
 string Serial::read(char c)
 {
-
     //digitalWrite(interrupt, HIGH);
     
     char receivedChar[256];

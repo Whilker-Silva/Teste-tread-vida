@@ -25,5 +25,5 @@ int main(int argc, char *argv[]) /// < Main function that create and calls for r
     // delete registro;
 
     return EXIT_SUCCESS;
-    oii
+    
 }

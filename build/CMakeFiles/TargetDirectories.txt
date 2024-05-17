@@ -1,3 +1,0 @@
-/home/odroid/Documents/Teste-tread-vida/build/CMakeFiles/vida.dir
-/home/odroid/Documents/Teste-tread-vida/build/CMakeFiles/edit_cache.dir
-/home/odroid/Documents/Teste-tread-vida/build/CMakeFiles/rebuild_cache.dir

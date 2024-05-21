@@ -9,11 +9,10 @@
 using namespace std;
 
 int main(int argc, char *argv[]) /// < Main function that create and calls for reading and writing in memory
-{   
-    Aquisicao *aquisicao = new Aquisicao();
+{
     Controle *controle = new Controle();
+    Aquisicao *aquisicao = new Aquisicao();
     Registro *registro = new Registro();
-    
 
     int quit = -1;
     do

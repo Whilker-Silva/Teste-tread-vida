@@ -53,7 +53,7 @@ int Registro::run()
     this->is_alive = 1;
 
     this->tim1.tv_sec = 0;
-    this->tim1.tv_nsec = 1000000L;
+    this->tim1.tv_nsec = 10000000L;
 
     while (this->is_alive)
     {
@@ -62,17 +62,18 @@ int Registro::run()
         if (sensorsData.time != lastData.time)
         {
 
-            lastData = sensorsData;
+            lastData.time = sensorsData.time;
 
             buffer << lastData.time << ";"
                    << lastData.pulsosEsquerda << ";"
                    << lastData.pulsosDireita << ";"
                    << lastData.pulsosTras << ";"
                    << lastData.estercamento << ";" << endl;
-            cont++;
+            
         }
+        ++count;
 
-        if ((cont % 10) == 0)
+        if ((count % 100) == 0)
         {
             salvar();
             buffer.str("");

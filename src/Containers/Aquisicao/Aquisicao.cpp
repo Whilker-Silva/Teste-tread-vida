@@ -54,7 +54,7 @@ int Aquisicao::run()
         stream >> sensorsData.pulsosDireita;
         stream >> sensorsData.pulsosTras;
         stream >> sensorsData.estercamento;
-        sensorsData.time = millis();
+        sensorsData.time = road_time();
 
         memoriaCompartilhada->write(&sensorsData, sizeof(Sensors));
 

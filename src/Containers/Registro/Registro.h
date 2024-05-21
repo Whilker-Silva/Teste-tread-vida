@@ -25,7 +25,7 @@ private:
 
     ostringstream buffer;
     ofstream saida;
-    long long unsigned int cont;
+    long long unsigned int count;
 
 public:
     Registro();

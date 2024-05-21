@@ -129,6 +129,30 @@ vida/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vida.dir/build.make CMakeFiles/vida.dir/build
 .PHONY : vida/fast
 
+Containers/Aquisicao/Aquisicao.o: Containers/Aquisicao/Aquisicao.cpp.o
+.PHONY : Containers/Aquisicao/Aquisicao.o
+
+# target to build an object file
+Containers/Aquisicao/Aquisicao.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vida.dir/build.make CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.o
+.PHONY : Containers/Aquisicao/Aquisicao.cpp.o
+
+Containers/Aquisicao/Aquisicao.i: Containers/Aquisicao/Aquisicao.cpp.i
+.PHONY : Containers/Aquisicao/Aquisicao.i
+
+# target to preprocess a source file
+Containers/Aquisicao/Aquisicao.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vida.dir/build.make CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.i
+.PHONY : Containers/Aquisicao/Aquisicao.cpp.i
+
+Containers/Aquisicao/Aquisicao.s: Containers/Aquisicao/Aquisicao.cpp.s
+.PHONY : Containers/Aquisicao/Aquisicao.s
+
+# target to generate assembly for a file
+Containers/Aquisicao/Aquisicao.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vida.dir/build.make CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.s
+.PHONY : Containers/Aquisicao/Aquisicao.cpp.s
+
 Containers/Controle/Controle.o: Containers/Controle/Controle.cpp.o
 .PHONY : Containers/Controle/Controle.o
 
@@ -306,6 +330,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... vida"
+	@echo "... Containers/Aquisicao/Aquisicao.o"
+	@echo "... Containers/Aquisicao/Aquisicao.i"
+	@echo "... Containers/Aquisicao/Aquisicao.s"
 	@echo "... Containers/Controle/Controle.o"
 	@echo "... Containers/Controle/Controle.i"
 	@echo "... Containers/Controle/Controle.s"

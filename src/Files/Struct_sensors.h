@@ -1,12 +1,13 @@
-#ifndef STRUCT_ENCODER_H
-#define STRUCT_ENCODER_H
+#ifndef STRUCT_SENSOR_H
+#define STRUCT_SENSOR_H
 
 typedef struct
 {
     int pulsosEsquerda;
     int pulsosDireita;
     int pulsosTras;
-}Encoder;
+    int estercamento;
+}Sensors;
 
 
 

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.o"
+  "CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.o.d"
   "CMakeFiles/vida.dir/Containers/Controle/Controle.cpp.o"
   "CMakeFiles/vida.dir/Containers/Controle/Controle.cpp.o.d"
   "CMakeFiles/vida.dir/Containers/Registro/Registro.cpp.o"

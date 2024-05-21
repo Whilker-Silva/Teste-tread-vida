@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/odroid/Documentos/Teste-tread-vida/src/Containers/Aquisicao/Aquisicao.cpp" "CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.o" "gcc" "CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.o.d"
   "/home/odroid/Documentos/Teste-tread-vida/src/Containers/Controle/Controle.cpp" "CMakeFiles/vida.dir/Containers/Controle/Controle.cpp.o" "gcc" "CMakeFiles/vida.dir/Containers/Controle/Controle.cpp.o.d"
   "/home/odroid/Documentos/Teste-tread-vida/src/Containers/Registro/Registro.cpp" "CMakeFiles/vida.dir/Containers/Registro/Registro.cpp.o" "gcc" "CMakeFiles/vida.dir/Containers/Registro/Registro.cpp.o.d"
   "/home/odroid/Documentos/Teste-tread-vida/src/Utils/PosixShMem/PosixShMem.cpp" "CMakeFiles/vida.dir/Utils/PosixShMem/PosixShMem.cpp.o" "gcc" "CMakeFiles/vida.dir/Utils/PosixShMem/PosixShMem.cpp.o.d"

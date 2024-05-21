@@ -22,8 +22,7 @@ void Serial::write(string s)
 
 string Serial::read(char c)
 {
-    digitalWrite(interrupt, LOW);
-    delay(10);
+    
     digitalWrite(interrupt, HIGH);
 
     char receivedChar[256];

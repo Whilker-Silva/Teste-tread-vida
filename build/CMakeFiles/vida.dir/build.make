@@ -83,10 +83,24 @@ CMakeFiles/vida.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vida.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/odroid/Documentos/Teste-tread-vida/src/main.cpp -o CMakeFiles/vida.dir/main.cpp.s
 
+CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.o: CMakeFiles/vida.dir/flags.make
+CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.o: /home/odroid/Documentos/Teste-tread-vida/src/Containers/Aquisicao/Aquisicao.cpp
+CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.o: CMakeFiles/vida.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odroid/Documentos/Teste-tread-vida/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.o -MF CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.o.d -o CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.o -c /home/odroid/Documentos/Teste-tread-vida/src/Containers/Aquisicao/Aquisicao.cpp
+
+CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/odroid/Documentos/Teste-tread-vida/src/Containers/Aquisicao/Aquisicao.cpp > CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.i
+
+CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/odroid/Documentos/Teste-tread-vida/src/Containers/Aquisicao/Aquisicao.cpp -o CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.s
+
 CMakeFiles/vida.dir/Containers/Controle/Controle.cpp.o: CMakeFiles/vida.dir/flags.make
 CMakeFiles/vida.dir/Containers/Controle/Controle.cpp.o: /home/odroid/Documentos/Teste-tread-vida/src/Containers/Controle/Controle.cpp
 CMakeFiles/vida.dir/Containers/Controle/Controle.cpp.o: CMakeFiles/vida.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odroid/Documentos/Teste-tread-vida/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/vida.dir/Containers/Controle/Controle.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odroid/Documentos/Teste-tread-vida/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/vida.dir/Containers/Controle/Controle.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vida.dir/Containers/Controle/Controle.cpp.o -MF CMakeFiles/vida.dir/Containers/Controle/Controle.cpp.o.d -o CMakeFiles/vida.dir/Containers/Controle/Controle.cpp.o -c /home/odroid/Documentos/Teste-tread-vida/src/Containers/Controle/Controle.cpp
 
 CMakeFiles/vida.dir/Containers/Controle/Controle.cpp.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/vida.dir/Containers/Controle/Controle.cpp.s: cmake_force
 CMakeFiles/vida.dir/Containers/Registro/Registro.cpp.o: CMakeFiles/vida.dir/flags.make
 CMakeFiles/vida.dir/Containers/Registro/Registro.cpp.o: /home/odroid/Documentos/Teste-tread-vida/src/Containers/Registro/Registro.cpp
 CMakeFiles/vida.dir/Containers/Registro/Registro.cpp.o: CMakeFiles/vida.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odroid/Documentos/Teste-tread-vida/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/vida.dir/Containers/Registro/Registro.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odroid/Documentos/Teste-tread-vida/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/vida.dir/Containers/Registro/Registro.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vida.dir/Containers/Registro/Registro.cpp.o -MF CMakeFiles/vida.dir/Containers/Registro/Registro.cpp.o.d -o CMakeFiles/vida.dir/Containers/Registro/Registro.cpp.o -c /home/odroid/Documentos/Teste-tread-vida/src/Containers/Registro/Registro.cpp
 
 CMakeFiles/vida.dir/Containers/Registro/Registro.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/vida.dir/Containers/Registro/Registro.cpp.s: cmake_force
 CMakeFiles/vida.dir/Utils/PosixShMem/PosixShMem.cpp.o: CMakeFiles/vida.dir/flags.make
 CMakeFiles/vida.dir/Utils/PosixShMem/PosixShMem.cpp.o: /home/odroid/Documentos/Teste-tread-vida/src/Utils/PosixShMem/PosixShMem.cpp
 CMakeFiles/vida.dir/Utils/PosixShMem/PosixShMem.cpp.o: CMakeFiles/vida.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odroid/Documentos/Teste-tread-vida/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/vida.dir/Utils/PosixShMem/PosixShMem.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odroid/Documentos/Teste-tread-vida/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/vida.dir/Utils/PosixShMem/PosixShMem.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vida.dir/Utils/PosixShMem/PosixShMem.cpp.o -MF CMakeFiles/vida.dir/Utils/PosixShMem/PosixShMem.cpp.o.d -o CMakeFiles/vida.dir/Utils/PosixShMem/PosixShMem.cpp.o -c /home/odroid/Documentos/Teste-tread-vida/src/Utils/PosixShMem/PosixShMem.cpp
 
 CMakeFiles/vida.dir/Utils/PosixShMem/PosixShMem.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/vida.dir/Utils/PosixShMem/PosixShMem.cpp.s: cmake_force
 CMakeFiles/vida.dir/Utils/Serial/Serial.cpp.o: CMakeFiles/vida.dir/flags.make
 CMakeFiles/vida.dir/Utils/Serial/Serial.cpp.o: /home/odroid/Documentos/Teste-tread-vida/src/Utils/Serial/Serial.cpp
 CMakeFiles/vida.dir/Utils/Serial/Serial.cpp.o: CMakeFiles/vida.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odroid/Documentos/Teste-tread-vida/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/vida.dir/Utils/Serial/Serial.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odroid/Documentos/Teste-tread-vida/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/vida.dir/Utils/Serial/Serial.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vida.dir/Utils/Serial/Serial.cpp.o -MF CMakeFiles/vida.dir/Utils/Serial/Serial.cpp.o.d -o CMakeFiles/vida.dir/Utils/Serial/Serial.cpp.o -c /home/odroid/Documentos/Teste-tread-vida/src/Utils/Serial/Serial.cpp
 
 CMakeFiles/vida.dir/Utils/Serial/Serial.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/vida.dir/Utils/Serial/Serial.cpp.s: cmake_force
 CMakeFiles/vida.dir/Utils/ThreadBase/ThreadBase.cpp.o: CMakeFiles/vida.dir/flags.make
 CMakeFiles/vida.dir/Utils/ThreadBase/ThreadBase.cpp.o: /home/odroid/Documentos/Teste-tread-vida/src/Utils/ThreadBase/ThreadBase.cpp
 CMakeFiles/vida.dir/Utils/ThreadBase/ThreadBase.cpp.o: CMakeFiles/vida.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odroid/Documentos/Teste-tread-vida/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/vida.dir/Utils/ThreadBase/ThreadBase.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odroid/Documentos/Teste-tread-vida/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/vida.dir/Utils/ThreadBase/ThreadBase.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vida.dir/Utils/ThreadBase/ThreadBase.cpp.o -MF CMakeFiles/vida.dir/Utils/ThreadBase/ThreadBase.cpp.o.d -o CMakeFiles/vida.dir/Utils/ThreadBase/ThreadBase.cpp.o -c /home/odroid/Documentos/Teste-tread-vida/src/Utils/ThreadBase/ThreadBase.cpp
 
 CMakeFiles/vida.dir/Utils/ThreadBase/ThreadBase.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/vida.dir/Utils/ThreadBase/ThreadBase.cpp.s: cmake_force
 CMakeFiles/vida.dir/Utils/UDP/UDP.cpp.o: CMakeFiles/vida.dir/flags.make
 CMakeFiles/vida.dir/Utils/UDP/UDP.cpp.o: /home/odroid/Documentos/Teste-tread-vida/src/Utils/UDP/UDP.cpp
 CMakeFiles/vida.dir/Utils/UDP/UDP.cpp.o: CMakeFiles/vida.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odroid/Documentos/Teste-tread-vida/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/vida.dir/Utils/UDP/UDP.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odroid/Documentos/Teste-tread-vida/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/vida.dir/Utils/UDP/UDP.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vida.dir/Utils/UDP/UDP.cpp.o -MF CMakeFiles/vida.dir/Utils/UDP/UDP.cpp.o.d -o CMakeFiles/vida.dir/Utils/UDP/UDP.cpp.o -c /home/odroid/Documentos/Teste-tread-vida/src/Utils/UDP/UDP.cpp
 
 CMakeFiles/vida.dir/Utils/UDP/UDP.cpp.i: cmake_force
@@ -170,6 +184,7 @@ CMakeFiles/vida.dir/Utils/UDP/UDP.cpp.s: cmake_force
 # Object files for target vida
 vida_OBJECTS = \
 "CMakeFiles/vida.dir/main.cpp.o" \
+"CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.o" \
 "CMakeFiles/vida.dir/Containers/Controle/Controle.cpp.o" \
 "CMakeFiles/vida.dir/Containers/Registro/Registro.cpp.o" \
 "CMakeFiles/vida.dir/Utils/PosixShMem/PosixShMem.cpp.o" \
@@ -181,6 +196,7 @@ vida_OBJECTS = \
 vida_EXTERNAL_OBJECTS =
 
 vida: CMakeFiles/vida.dir/main.cpp.o
+vida: CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.o
 vida: CMakeFiles/vida.dir/Containers/Controle/Controle.cpp.o
 vida: CMakeFiles/vida.dir/Containers/Registro/Registro.cpp.o
 vida: CMakeFiles/vida.dir/Utils/PosixShMem/PosixShMem.cpp.o
@@ -191,7 +207,7 @@ vida: CMakeFiles/vida.dir/build.make
 vida: /usr/local/lib/libwiringPi.so
 vida: /usr/local/lib/libwiringPiDev.so
 vida: CMakeFiles/vida.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/odroid/Documentos/Teste-tread-vida/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable vida"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/odroid/Documentos/Teste-tread-vida/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable vida"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vida.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

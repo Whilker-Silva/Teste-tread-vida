@@ -30,6 +30,8 @@ void Controle::stopActivity()
 
     this->udp = NULL;
     serialMotor = NULL;
+
+    cout << "STOPPED THREAD CONTROLE" << endl;
 }
 
 int Controle::run()

@@ -27,7 +27,11 @@ target_sources(
 
         #Files
         Files/DefinePin.h
-        Files/Struct_encoders.h
+        Files/Struct_sensors.h
+
+        #Aquisicao
+        Containers/Aquisicao/Aquisicao.cpp
+        Containers/Aquisicao/Aquisicao.h
 
         #Controle
         Containers/Controle/Controle.cpp

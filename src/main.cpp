@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include "Containers/Controle/Controle.h"
-#include "Containers/Registro/Registro.h"
+#include "Containers/Aquisicao/Aquisicao.h"
 #include "Utils/Serial/Serial.h"
 #include "Files/DefinePin.h"
 
@@ -9,7 +9,7 @@ using namespace std;
 
 int main(int argc, char *argv[]) /// < Main function that create and calls for reading and writing in memory
 {   
-    Registro *registro = new Registro();
+    Aquisicao *aquisicao = new Aquisicao();
     Controle *controle = new Controle();
     
 
@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) /// < Main function that create and calls for r
     } while (quit != 0);
 
     delete controle;
-    delete registro;
+    delete aquisicao;
 
     return EXIT_SUCCESS;
 }

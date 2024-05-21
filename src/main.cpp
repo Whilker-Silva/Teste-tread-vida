@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstdlib>
-
 #include "Containers/Controle/Controle.h"
 #include "Containers/Registro/Registro.h"
 #include "Utils/Serial/Serial.h"
@@ -9,11 +8,10 @@
 using namespace std;
 
 int main(int argc, char *argv[]) /// < Main function that create and calls for reading and writing in memory
-{
+{   
+    Registro *registro = new Registro();
     Controle *controle = new Controle();
-    Registro * registro = new Registro();
-
-
+    
 
     int quit = -1;
     do
@@ -22,8 +20,7 @@ int main(int argc, char *argv[]) /// < Main function that create and calls for r
     } while (quit != 0);
 
     delete controle;
-    // delete registro;
+    delete registro;
 
     return EXIT_SUCCESS;
-    
 }

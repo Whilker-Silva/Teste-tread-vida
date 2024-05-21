@@ -2,7 +2,7 @@
 
 Controle::Controle()
 {
-    this->udp = NULL; 
+    this->udp = NULL;
     this->serialMotor = NULL;
     this->startActivity();
 }
@@ -12,7 +12,7 @@ void Controle::startActivity()
     cout << "Inicializando a thread de controle" << endl;
 
     this->udp = new UDP();
-    this->serialMotor = new Serial(motorInterrupt, BAUD_RATE, "ttyS1"); 
+    this->serialMotor = new Serial(motorInterrupt, BAUD_RATE, "ttyS1");
     ThreadBase::startActivity();
 }
 
@@ -21,16 +21,15 @@ Controle::~Controle()
     this->stopActivity();
 }
 
-void Controle::stopActivity() 
+void Controle::stopActivity()
 {
+    ThreadBase::stopActivity();
 
     delete this->udp;
     delete this->serialMotor;
-    
+
     this->udp = NULL;
     serialMotor = NULL;
-
-    ThreadBase::stopActivity();
 }
 
 int Controle::run()
@@ -44,7 +43,7 @@ int Controle::run()
 
     while (this->is_alive)
     {
-        serialMotor->write(udp->read());        
+        serialMotor->write(udp->read());
         nanosleep(&this->tim1, &this->tim2);
     }
 

@@ -21,12 +21,10 @@ private:
     PosixShMem *memoriaCompartilhada;   
     Encoder encoderData; 
 
-    Serial *serialMotor;
-    Serial *serialEncoder;
+    Serial *serialSensors;
 
 public:
     Registro();
-    Registro(Serial *serialEncoder, Serial *serialMotor);
     ~Registro();
 };
 

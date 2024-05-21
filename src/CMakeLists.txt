@@ -6,10 +6,16 @@ add_executable(vida) #cria o executável vida
 #Procura pelo pacote Threads. Este pacote fornece suporte para multithreading em projetos CMake.
 find_package (Threads)
 find_library(WIRINGPI_LIB wiringPi)
+find_library(WIRINGPI_DEV_LIB wiringPiDev)
 
 #Liga as bibliotecas Threads e "rt" ao executável "vida".
-target_link_libraries(vida ${CMAKE_THREAD_LIBS_INIT} rt) 
-target_link_libraries(vida ${WIRINGPI_LIB})
+target_link_libraries(vida
+    ${CMAKE_THREAD_LIBS_INIT}
+    rt
+    ${WIRINGPI_LIB}
+    ${WIRINGPI_DEV_LIB}
+    crypt
+)
 
 #associa os arquivos fontes um ao execultavel vida
 target_sources(

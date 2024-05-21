@@ -4,7 +4,6 @@ Aquisicao::Aquisicao()
 {
     this->serialSensors = NULL;
     this->memoriaCompartilhada = NULL;
-
     this->startActivity();
 }
 
@@ -27,11 +26,7 @@ void Aquisicao::stopActivity()
 {
 
     ThreadBase::stopActivity();
-
-    if (this->memoriaCompartilhada)
-    {
-        delete this->memoriaCompartilhada;
-    }
+    
     delete serialSensors;
 
     this->memoriaCompartilhada = NULL;
@@ -59,6 +54,7 @@ int Aquisicao::run()
         stream >> sensorsData.pulsosDireita;
         stream >> sensorsData.pulsosTras;
         stream >> sensorsData.estercamento;
+        sensorsData.time = millis();
 
         memoriaCompartilhada->write(&sensorsData, sizeof(Sensors));
 

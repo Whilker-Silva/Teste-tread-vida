@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include "Containers/Controle/Controle.h"
 #include "Containers/Aquisicao/Aquisicao.h"
+#include "Containers/Registro/Registro.h"
 #include "Utils/Serial/Serial.h"
 #include "Files/DefinePin.h"
 
@@ -11,6 +12,7 @@ int main(int argc, char *argv[]) /// < Main function that create and calls for r
 {   
     Aquisicao *aquisicao = new Aquisicao();
     Controle *controle = new Controle();
+    Registro *registro = new Registro();
     
 
     int quit = -1;
@@ -21,6 +23,7 @@ int main(int argc, char *argv[]) /// < Main function that create and calls for r
 
     delete controle;
     delete aquisicao;
+    delete registro;
 
     return EXIT_SUCCESS;
 }

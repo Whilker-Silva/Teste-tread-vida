@@ -190,7 +190,17 @@ CMakeFiles/vida.dir/main.cpp.o: \
  /home/odroid/Documentos/Teste-tread-vida/src/Containers/Aquisicao/../../Utils/ThreadBase/ThreadBase.h \
  /home/odroid/Documentos/Teste-tread-vida/src/Containers/Aquisicao/../../Utils/Serial/Serial.h \
  /home/odroid/Documentos/Teste-tread-vida/src/Containers/Aquisicao/../../Files/Struct_sensors.h \
+ /home/odroid/Documentos/Teste-tread-vida/src/Containers/Aquisicao/../../Files/../Utils/road_time.h \
+ /usr/include/aarch64-linux-gnu/sys/time.h \
  /home/odroid/Documentos/Teste-tread-vida/src/Containers/Aquisicao/../../Files/DefinePin.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
+ /home/odroid/Documentos/Teste-tread-vida/src/Containers/Registro/Registro.h \
+ /home/odroid/Documentos/Teste-tread-vida/src/Containers/Registro/../../Utils/ThreadBase/ThreadBase.h \
+ /home/odroid/Documentos/Teste-tread-vida/src/Containers/Registro/../../Utils/PosixShMem/PosixShMem.h \
+ /home/odroid/Documentos/Teste-tread-vida/src/Containers/Registro/../../Files/Struct_sensors.h \
+ /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/aarch64-linux-gnu/c++/11/bits/basic_file.h \
+ /usr/include/aarch64-linux-gnu/c++/11/bits/c++io.h \
+ /usr/include/c++/11/bits/fstream.tcc \
  /home/odroid/Documentos/Teste-tread-vida/src/Utils/Serial/Serial.h \
  /home/odroid/Documentos/Teste-tread-vida/src/Files/DefinePin.h

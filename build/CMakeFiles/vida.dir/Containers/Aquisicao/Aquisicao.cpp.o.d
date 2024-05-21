@@ -169,6 +169,8 @@ CMakeFiles/vida.dir/Containers/Aquisicao/Aquisicao.cpp.o: \
  /usr/include/c++/11/bits/istream.tcc /usr/local/include/wiringPi.h \
  /usr/local/include/wiringSerial.h \
  /home/odroid/Documentos/Teste-tread-vida/src/Containers/Aquisicao/../../Files/Struct_sensors.h \
+ /home/odroid/Documentos/Teste-tread-vida/src/Containers/Aquisicao/../../Files/../Utils/road_time.h \
+ /usr/include/aarch64-linux-gnu/sys/time.h \
  /home/odroid/Documentos/Teste-tread-vida/src/Containers/Aquisicao/../../Files/DefinePin.h \
  /home/odroid/Documentos/Teste-tread-vida/src/Containers/Aquisicao/../../Files/../Utils/Serial/Serial.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc

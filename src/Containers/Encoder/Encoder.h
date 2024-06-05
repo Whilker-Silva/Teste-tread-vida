@@ -1,33 +1,33 @@
-#ifndef AQUISICAO_H
-#define AQUISICAO_H
+#ifndef ENCODER_H
+#define ENCODER_H
+
+#include <iostream>
+#include <sstream>
+#include <wiringPi.h>
 
 #include "../../Utils/PosixShMem/PosixShMem.h"
 #include "../../Utils/ThreadBase/ThreadBase.h"
 #include "../../Utils/Serial/Serial.h"
 #include "../../Files/Struct_sensors.h"
 #include "../../Files/DefinePin.h"
-#include <iostream>
-#include <sstream>   
 
 using namespace std;
 
-class Aquisicao : public ThreadBase
+class Encoder : public ThreadBase
 {
 private:
-        
     void startActivity() override;
     void stopActivity() override;
-    int run() override;   
+    int run() override;
 
-    PosixShMem *memoriaCompartilhada;   
-    Sensors sensorsData; 
+    PosixShMem *memoryShared;
+    Encoder_data encoderData;
 
-    Serial *serialSensors;
+    Serial *encoderSerial;
 
 public:
-    Aquisicao();
-    ~Aquisicao();
+    Encoder();
+    ~Encoder();
 };
-
 
 #endif

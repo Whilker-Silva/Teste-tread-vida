@@ -1,5 +1,5 @@
-#ifndef REGISTRO_H
-#define RESISTRO_H
+#ifndef RECORD_H
+#define RECORD_H
 
 #include "../../Utils/ThreadBase/ThreadBase.h"
 #include "../../Utils/PosixShMem/PosixShMem.h"
@@ -11,7 +11,7 @@
 
 using namespace std;
 
-class Registro : public ThreadBase
+class Record : public ThreadBase
 {
 private:
     void startActivity() override;
@@ -19,17 +19,19 @@ private:
     int run() override;
     void salvar();
 
-    PosixShMem *memoriaCompartilhada;
-    Sensors sensorsData;
-    Sensors lastData;
+    PosixShMem *memorySharedEncoder;
+    PosixShMem *memorySharedSteering;
+
+    Encoder_data encoderData;
+    Encoder_data lastData;
 
     ostringstream buffer;
     ofstream saida;
     long long unsigned int count;
 
 public:
-    Registro();
-    ~Registro();
+    Record();
+    ~Record();
 };
 
 #endif

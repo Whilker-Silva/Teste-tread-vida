@@ -1,13 +1,11 @@
 #include "Serial.h"
 
-Serial::Serial(int interrupt, int baudRate, string p)
+Serial::Serial(string port)
 {
-    string porta = "/dev/" + p;
-    this->serialport = serialOpen(porta.c_str(), baudRate);
-    this->interrupt = interrupt;
-    wiringPiSetup();
-    pinMode(interrupt, OUTPUT);
-    digitalWrite(interrupt, LOW);
+    string aux = "/dev/" + port;
+    port = aux;
+
+    this->serialport = serialOpen(port.c_str(), BAUD_RATE);
 }
 
 Serial::~Serial()
@@ -22,42 +20,40 @@ void Serial::write(string s)
 
 string Serial::read(char c)
 {
-    
-    digitalWrite(interrupt, HIGH);
-
     char receivedChar[256];
-    int indice = 0;
+    int index = 0;
 
-    bool fim = false;
-    long tempo = millis();
+    bool end = false;
+    time = road_time();
     do
     {
-
+        // Verifica se há dados disponíveis para leitura
         if (serialDataAvail(serialport))
-        {                                                  // Verifica se há dados disponíveis para leitura
+        {
             char incomingByte = serialGetchar(serialport); // Lê um byte da porta serial
 
+            // Se encontrou um caractere de término de linha
             if (incomingByte == '\n' || incomingByte == c)
-            {                                // Se encontrou um caractere de término de linha
-                receivedChar[indice] = '\0'; // Adiciona um terminador de string ao final
-                fim = true;
+            {
+                receivedChar[index] = '\0'; // Adiciona um terminador de string ao final
+                end = true;
             }
+
             else
             {
-                receivedChar[indice++] = incomingByte; // Armazena o byte no buffer e incrementa o índice
+                receivedChar[index++] = incomingByte; // Armazena o byte no buffer e incrementa o índice
             }
         }
 
-        if ((millis() - tempo) > 1000)
+        if ((road_time() - time) > 1000)
         {
-            receivedChar[indice++] = '-';
-            receivedChar[indice++] = '1';
-            receivedChar[indice] = '\0';
-            fim = true;
+            receivedChar[index++] = '-';
+            receivedChar[index++] = '1';
+            receivedChar[index] = '\0';
+            end = true;
         }
 
-    } while (!fim);
-
-    digitalWrite(interrupt, LOW);
+    } while (!end);
+    
     return receivedChar;
 }

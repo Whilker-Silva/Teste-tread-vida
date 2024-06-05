@@ -5,14 +5,16 @@
 
 typedef struct
 {
-    int pulsosEsquerda;
-    int pulsosDireita;
-    int pulsosTras;
-    int estercamento;
+    int leftPulses;
+    int rigthPulses;
+    int backPulses;
     road_time_t time;
-}Sensors;
+} Encoder_data;
 
-
-
+typedef struct
+{
+    int steering;
+    road_time_t time;
+} Steering_data;
 
 #endif

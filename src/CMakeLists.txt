@@ -29,17 +29,21 @@ target_sources(
         Files/DefinePin.h
         Files/Struct_sensors.h
 
-        #Aquisicao
-        Containers/Aquisicao/Aquisicao.cpp
-        Containers/Aquisicao/Aquisicao.h
+        #Encoder
+        Containers/Encoder/Encoder.cpp
+        Containers/Encoder/Encoder.h
 
-        #Controle
-        Containers/Controle/Controle.cpp
-        Containers/Controle/Controle.h      
+        #Steering
+        Containers/Steering/Steering.cpp
+        Containers/Steering/Steering.h
 
-        #Registro
-        Containers/Registro/Registro.cpp
-        Containers/Registro/Registro.h
+        #Control
+        Containers/Control/Control.cpp
+        Containers/Control/Control.h      
+
+        #Record
+        Containers/Record/Record.cpp
+        Containers/Record/Record.h
 
         #memoria compartilhada
         Utils/PosixShMem/PosixShMem.cpp

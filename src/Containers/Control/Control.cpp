@@ -1,40 +1,40 @@
-#include "Controle.h"
+#include "Control.h"
 
-Controle::Controle()
+Control::Control()
 {
     this->udp = NULL;
-    this->serialMotor = NULL;
+    this->motorSerial = NULL;
     this->startActivity();
 }
 
-void Controle::startActivity()
+void Control::startActivity()
 {
-    cout << "Inicializando a thread de controle" << endl;
-
     this->udp = new UDP();
-    this->serialMotor = new Serial(motorInterrupt, BAUD_RATE, "ttyS1");
+    this->motorSerial = new Serial("ttyS1");
+
+    cout << "Start the thread control" << endl;
     ThreadBase::startActivity();
 }
 
-Controle::~Controle()
+Control::~Control()
 {
     this->stopActivity();
 }
 
-void Controle::stopActivity()
+void Control::stopActivity()
 {
     ThreadBase::stopActivity();
 
     delete this->udp;
-    delete this->serialMotor;
+    delete this->motorSerial;
 
     this->udp = NULL;
-    serialMotor = NULL;
+    motorSerial = NULL;
 
-    cout << "STOPPED THREAD CONTROLE" << endl;
+    cout << "Stopped Thread Control" << endl;
 }
 
-int Controle::run()
+int Control::run()
 {
 
     this->is_running = 1;
@@ -45,7 +45,7 @@ int Controle::run()
 
     while (this->is_alive)
     {
-        serialMotor->write(udp->read());
+        motorSerial->write(udp->read());
         nanosleep(&this->tim1, &this->tim2);
     }
 

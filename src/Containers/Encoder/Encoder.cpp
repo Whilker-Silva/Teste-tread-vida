@@ -49,9 +49,7 @@ int Encoder::run()
     this->tim1.tv_nsec = 0;
 
     while (this->is_alive)
-    {
-        string buffer;
-
+    {       
         digitalWrite(encoderInterrupt, HIGH);
         buffer = encoderSerial->read('\n');
         digitalWrite(encoderInterrupt, LOW);

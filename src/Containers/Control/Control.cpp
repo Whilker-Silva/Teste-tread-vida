@@ -4,6 +4,10 @@ Control::Control()
 {
     this->udp = NULL;
     this->motorSerial = NULL;
+
+    udpData = "NULL";
+    lastData = "NULL";
+
     this->startActivity();
 }
 
@@ -43,9 +47,17 @@ int Control::run()
     this->tim1.tv_sec = 0;
     this->tim1.tv_nsec = 10000000L;
 
+    
     while (this->is_alive)
     {
-        motorSerial->write(udp->read());
+        udpData = udp->read();
+
+        if (udpData != lastData)
+        {
+            motorSerial->write(udpData);
+            lastData = udpData;
+        }
+
         nanosleep(&this->tim1, &this->tim2);
     }
 

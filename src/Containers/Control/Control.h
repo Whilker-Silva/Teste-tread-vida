@@ -17,6 +17,9 @@ private:
     UDP *udp;
     Serial *motorSerial;
 
+    string lastData;
+    string udpData;
+
     void startActivity() override;
     void stopActivity() override;
     int run() override;

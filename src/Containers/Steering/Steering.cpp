@@ -30,7 +30,7 @@ void Steering::stopActivity()
 {
 
     ThreadBase::stopActivity();
-    
+
     delete serialSensors;
 
     this->memoryShared = NULL;
@@ -50,8 +50,6 @@ int Steering::run()
 
     while (this->is_alive)
     {
-        string buffer;
-
         digitalWrite(steeringInterrupt, HIGH);
         buffer = serialSensors->read('\n');
         digitalWrite(steeringInterrupt, LOW);

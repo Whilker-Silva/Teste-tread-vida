@@ -22,6 +22,7 @@ private:
 
     PosixShMem *memoryShared;
     Encoder_data encoderData;
+    string buffer;
 
     Serial *encoderSerial;
 

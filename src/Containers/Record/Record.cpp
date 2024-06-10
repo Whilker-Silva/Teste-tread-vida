@@ -3,16 +3,16 @@
 Record::Record()
 {
     this->memorySharedEncoder = NULL;
+    this->memorySharedSteering = NULL;
 
     // inicializa valor de leitura da memoria compartilhada
     this->encoderData.leftPulses = 0;
     this->encoderData.rigthPulses = 0;
     this->encoderData.backPulses = 0;
+    this->lastDataEncoder = road_time();
 
-    // inicializa ultimo valor de leitura da memoria compartilhada
-    this->lastData.leftPulses = 0;
-    this->lastData.rigthPulses = 0;
-    this->lastData.backPulses = 0;
+    this->steeringData.steering = 0;
+    this->steeringData.time = road_time();
 
     this->startActivity();
 }
@@ -20,6 +20,7 @@ Record::Record()
 void Record::startActivity()
 {
     this->memorySharedEncoder = new PosixShMem("sharedMemoryEncoder", sizeof(Encoder_data));
+    this->memorySharedSteering = new PosixShMem("sharedMemorySteering", sizeof(Steering_data));
 
     cout << "Start the thread Record" << endl;
     ThreadBase::startActivity();
@@ -27,7 +28,8 @@ void Record::startActivity()
 
 Record::~Record()
 {
-    salvar();
+    saveEncoder();
+    saveSteering();
     this->stopActivity();
 }
 
@@ -40,7 +42,13 @@ void Record::stopActivity()
         delete memorySharedEncoder;
     }
 
+    if (memorySharedSteering != NULL)
+    {
+        delete memorySharedSteering;
+    }
+
     memorySharedEncoder = NULL;
+    memorySharedSteering = NULL;
 
     cout << "Stopped Thread Record" << endl;
 }
@@ -56,23 +64,40 @@ int Record::run()
     while (this->is_alive)
     {
         memorySharedEncoder->read(&encoderData, sizeof(Encoder_data));
+        memorySharedSteering->read(&steeringData, sizeof(Steering_data));
 
-        if (encoderData.time != lastData.time)
+        if (encoderData.time != lastDataEncoder)
         {
 
-            lastData.time = encoderData.time;
+            lastDataEncoder = encoderData.time;
 
-            buffer << lastData.time << ";"
-                   << lastData.leftPulses << ";"
-                   << lastData.rigthPulses << ";"
-                   << lastData.backPulses << ";" << endl;
+            bufferEncoder << encoderData.time << ";"
+                          << encoderData.leftPulses << ";"
+                          << encoderData.rigthPulses << ";"
+                          << encoderData.backPulses << endl;
         }
-        ++count;
+        ++countEncoder;
 
-        if ((count % 100) == 0)
+        if (steeringData.time != lastDataSteering)
         {
-            salvar();
-            buffer.str("");
+
+            lastDataSteering = steeringData.time;
+
+            bufferSteering << steeringData.time << ";"
+                           << steeringData.steering << endl;
+        }
+        ++countSteering;
+
+        if ((countEncoder % 100) == 0)
+        {
+            saveEncoder();
+            bufferEncoder.str("");
+        }
+
+        if ((countSteering % 100) == 0)
+        {
+            saveSteering();
+            bufferSteering.str("");
         }
 
         nanosleep(&this->tim1, NULL);
@@ -84,9 +109,16 @@ int Record::run()
     return 1;
 }
 
-void Record::salvar()
+void Record::saveEncoder()
 {
-    saida.open("../DataRecorder.txt", ios_base::out | ios_base::app);
-    saida << buffer.str();
-    saida.close();
+    outputEncoder.open("../EncoderDataRecorder.txt", ios_base::out | ios_base::app);
+    outputEncoder << bufferEncoder.str();
+    outputEncoder.close();
+}
+
+void Record::saveSteering()
+{
+    outputSteering.open("../SteeringDataRecorder.txt", ios_base::out | ios_base::app);
+    outputSteering << bufferSteering.str();
+    outputSteering.close();
 }

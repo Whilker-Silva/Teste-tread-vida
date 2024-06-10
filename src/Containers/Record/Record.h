@@ -17,17 +17,23 @@ private:
     void startActivity() override;
     void stopActivity() override;
     int run() override;
-    void salvar();
+    void saveEncoder();
+    void saveSteering();
 
     PosixShMem *memorySharedEncoder;
     PosixShMem *memorySharedSteering;
 
     Encoder_data encoderData;
-    Encoder_data lastData;
+    road_time_t lastDataEncoder;
+    ostringstream bufferEncoder;
+    ofstream outputEncoder;
+    long long unsigned int countEncoder;
 
-    ostringstream buffer;
-    ofstream saida;
-    long long unsigned int count;
+    Steering_data steeringData;
+    road_time_t lastDataSteering;
+    ostringstream bufferSteering;
+    ofstream outputSteering;
+    long long unsigned int countSteering;
 
 public:
     Record();

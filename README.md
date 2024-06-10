@@ -13,6 +13,8 @@
 5- cd WiringPi
 6- ./build
 
+# Instalação da biblioteca wirinPi Odroid
+
 # Compilação
 1- cmake -S src -B build -----------------Identificar as pastas src e build
 2- cd build ------------------------------Acessa diretori build
